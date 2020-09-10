@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    tools:context=".admin.Add.AddTpsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/namatps_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kode TPS"
+                android:digits="1234567890"
+                android:inputType="number"
+                android:phoneNumber="true"
+                app:textInputLayoutFocusedRectEnabled="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Masukan nomer tps contoh = 05"
+            android:textColor="#FF5722" />
+
+        <TextView
+            android:id="@+id/textVieaw6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp"
+            android:text="Provinsi" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/addspprov_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:hintText="Pilih provinsi" />
+
+
+        <TextView
+            android:id="@+id/textVsdiew6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp"
+            android:text="Kabupaten" />
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/addspkab_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:hintText="Pilih kabupaten" />
+
+
+        <TextView
+            android:id="@+id/textVaseiew6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp"
+            android:text="Kecamatan" />
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/addspkec_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:hintText="Pilih kecamatan" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp"
+            android:text="Kelurahan" />
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/addspkel_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:hintText="Pilih kelurahan/desa" />
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/tps" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="175dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btnlock"
+            android:text="Unggah Foto TPS"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginTop="17dp"
+                android:onClick="Send"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:background="@drawable/btnok"
+                android:text="Tambahkan TPS"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

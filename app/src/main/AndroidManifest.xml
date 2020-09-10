@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kgp.salamat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".admin.Add.UbahProfileActivity" android:theme="@style/ThemaBiru"></activity>
+        <activity android:name=".admin.ProfilAdminActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.Detail.DetailTpsActivity" android:parentActivityName=".admin.DataTpsActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.Add.AddTpsActivity"  android:parentActivityName=".admin.DataTpsActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.DataTpsActivity" android:parentActivityName=".admin.AdminActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.Detail.DetailPaslonActivity" android:parentActivityName=".admin.DataPaslonActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".relawan.ProfilRelawanActivity" />
+        <activity android:name=".InputSuaraActivity" />
+        <activity android:name=".admin.Add.AddPaslonActivity" android:parentActivityName=".admin.DataPaslonActivity" android:theme="@style/ThemaBiru" />
+        <activity android:name=".admin.DataPaslonActivity" android:parentActivityName=".admin.AdminActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.Detail.DetailListRelawanActivity" android:parentActivityName=".admin.ListRelawanActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.ListRelawanActivity" android:parentActivityName=".admin.AdminActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.Detail.DetailTerimaActivity" android:parentActivityName=".admin.TerimaRelawanActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.TerimaRelawanActivity" android:parentActivityName=".admin.AdminActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.HasilSuaraActivity" android:theme="@style/ThemaBiru"/>
+        <activity android:name=".admin.AdminActivity" android:theme="@style/ThemaBiru">
+
+
+
+        </activity>
+
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/AppTheme.NoAction">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".SplashScreenActivity2"
+            android:theme="@style/AppTheme.NoAction" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoAction" />
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/AppTheme.NoAction" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>
