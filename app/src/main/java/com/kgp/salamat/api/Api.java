@@ -9,4 +9,7 @@ public class Api {
 
     //register
     public static final String ENDPOINT_REGISTER_RELAWAN = BASE_URL+ "daftar/add";
+
+    //input suara
+    public static final String ENDPOINT_INPUT_SUARA = BASE_URL+ "suara/add";
 }

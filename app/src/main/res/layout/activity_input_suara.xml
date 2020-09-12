@@ -29,13 +29,13 @@
                 android:gravity="center"
                 android:textColor="@android:color/white"
                 android:background="@drawable/ic_lens_black_24dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="20dp"/>
             <TextView
                 android:id="@+id/tv_NamaPaslonDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Candra Billy Sagita - Misbachul Munir"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="8dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,18 +44,131 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <EditText
-                    android:id="@+id/etInput_HasilSuara"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInput_NIK"
+                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Input Suara"
+                    android:hint="NIK"
                     android:inputType="number"/>
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInput_NamaRelawan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="Nama Relawan"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInput_idtps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="TPS"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInput_NamaTPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="Nama TPS"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_inputjumlahsuara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="Jumlah Suara"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInput_fotobukti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="fotobukti"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:id="@+id/buktisuara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_fotobukti"
+                    android:gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:text="BUKTI SUARA"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_fotobukti"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/tambahfoto"/>
+                <TextView
+                    android:id="@+id/tv_bukti"
+                    android:layout_toRightOf="@id/iv_fotobukti"
+                    android:layout_below="@id/buktisuara"
+                    android:justificationMode="inter_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Wajib melampirkan bukti dalam bentuk foto kedalam inputan suara. untuk memastikan kebenaran dari hasil suara yang anda input."/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ambil Gambar"
+                    android:layout_toRightOf="@id/iv_fotobukti"
+                    android:layout_below="@id/tv_bukti"/>
+            </RelativeLayout>
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:gravity="center">-->
+<!--               -->
+<!--            </RelativeLayout>-->
+            <Button
+                android:id="@+id/btn_editsuara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Suara"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"/>
+            <Button
+                android:id="@+id/btn_kirimsuara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kirim Data"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/btn_editsuara"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_green_light"/>
+
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="I"/>
     </LinearLayout>
 
 </ScrollView>

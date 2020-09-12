@@ -1,6 +1,7 @@
 package com.kgp.salamat.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,12 +12,14 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.kgp.salamat.InputSuaraActivity;
 import com.kgp.salamat.R;
 import com.kgp.salamat.adapter.AdapterPaslon;
 import com.kgp.salamat.model.PaslonItem;
@@ -49,9 +52,10 @@ public class fragment_beranda extends Fragment {
         progressBar = view.findViewById(R.id.pb_RelawanBeranda);
         recyclerView = view.findViewById(R.id.recycler_listPaslon);
         loadPaslonData();
-        adapterPaslon = new AdapterPaslon(paslonItemList, getContext());
+        adapterPaslon= new AdapterPaslon (paslonItemList, getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapterPaslon);
+
     }
 
     private void loadPaslonData() {
@@ -73,6 +77,7 @@ public class fragment_beranda extends Fragment {
         });
 
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

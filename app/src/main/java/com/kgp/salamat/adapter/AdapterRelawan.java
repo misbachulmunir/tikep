@@ -1,6 +1,7 @@
 package com.kgp.salamat.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.kgp.salamat.DetailRelawanActivity;
 import com.kgp.salamat.R;
 import com.kgp.salamat.fragment.fragment_relawan;
 import com.kgp.salamat.model.RelawanItem;
@@ -91,7 +93,7 @@ public class AdapterRelawan extends RecyclerView.Adapter<AdapterRelawan.ViewHold
         }
     };
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
         final TextView tvNama, tvHP, tvTPS;
 
         ViewHolder(@NonNull View itemView){
@@ -100,6 +102,24 @@ public class AdapterRelawan extends RecyclerView.Adapter<AdapterRelawan.ViewHold
             tvNama = itemView.findViewById(R.id.tvNama_listRelawan);
             tvHP = itemView.findViewById(R.id.tvNOHP_listRelawan);
             tvTPS = itemView.findViewById(R.id.tvTPS_listRelawan);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos = getAdapterPosition();
+                    if (pos !=RecyclerView.NO_POSITION){
+                        RelawanItem clickeditem = relawanItems.get(pos);
+                        Intent intent = new Intent(context, DetailRelawanActivity.class);
+                        intent.putExtra("id_relawan", relawanItems.get(pos).getIdRelawan());
+                        intent.putExtra("nama_lengkap", relawanItems.get(pos).getNamaLengkap());
+                        intent.putExtra("alamat", relawanItems.get(pos).getAlamat());
+                        intent.putExtra("email", relawanItems.get(pos).getEmail());
+                        intent.putExtra("no_hp", relawanItems.get(pos).getNoHp());
+                        intent.putExtra("tps", relawanItems.get(pos).getTps());
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                    }
+                }
+            });
         }
     }
 }
